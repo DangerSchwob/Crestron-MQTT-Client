@@ -1,0 +1,352 @@
+[BEGIN]
+  Version=1
+[END]
+[BEGIN]
+  ObjTp=FSgntr
+  Sgntr=UserSPlus
+  RelVrs=1
+  IntStrVrs=1
+  SPlusVrs=4.06.00
+  CrossCplrVrs=1.3
+[END]
+[BEGIN]
+  ObjTp=Hd
+  Cmn1=This package of modules allows to connect to an MQTT broker and||1
+  Cmn2=to publish and subscribe to topics.\\\\The MqttTopicInstance modules||1
+  Cmn3=are used to publish and subscribe to topics on the MQTT broker.||1
+  Cmn4=The MQTT data is always a string, but the modules converts the data||1
+  Cmn5=in the data format that is needed.\\\\This module is to subscribe||1
+  Cmn6=to topics and convert it as string value. This modules also supports||1
+  Cmn7=to parse structured data like JSON and extract a single value. See||1
+  Cmn8=details at the end of the help.\\\\Parameters:\\UniqueID: This ID||1
+  Cmn9=must match with the ID that is entered of the corresponding client||1
+  Cmn10=module.\\TopicName[]: Defines the topic for the signal next to it.
+  Cmn11=||1e.g. my/topic/temp \\\\Inputs:\\\\Outputs:\\Initialize_FB: When||1
+  Cmn12=true, indicates that it could bind to the client module and is ready||1
+  Cmn13=to use.\\TopicOutput[]: The signal output for the topic.\\||6
+  Cmn14=||5\\Parsing of the structured data:\\This version only supports||1
+  Cmn15=the parsing of JSON\\For this, the topic name need to be extended||1
+  Cmn16=with the following string §JSON§SelectToken. How a select token||1
+  Cmn17=can look like, can be checked on this website https://www.newtonsoft.
+  Cmn18=com/json/help/html/selecttoken.htm.\\\\e.g. for topic my/topic/address\\
+  Cmn19=with this JSON data\\{\\  "address": {\\    "city": "Anytown"\\||1
+  Cmn20=||1}\\}\\The topic parameter will look like this:\\my/topic/address§JSON§address.
+  Cmn21=city\\\\
+[END]
+[BEGIN]
+  ObjTp=Symbol
+  Exclusions=1,19,20,21,88,89,167,168,179,213,214,215,216,217,225,226,248,249,266,267,310,362,378,380,405,407,408,409,478,522,537,554,586,590,611,624,718,756,767,830,841,842,854,883,955,1032,1062,1079,1128,1129,1134,1140,1157,1158,1195,1199,1220,1221,1222,1223,1299,1348,1349,1439,1472,1473,1499,1746,1766,1803,1975,2229,2354,2514,2523,2532,2567,2574,2590,2651,2655,2706,2707,2817,2886,2938,2947,3181,3197,3233,3235,3236,3427,3454,3567,3568,3601,3602,3680,3682,3706,3708,3710,3735,3736,3816,3888,3902,3903,3912,3918,3925,3926,4176,4193,4206,4207,4308,4476,4591,4769,5360,5388,5420,5455,5497,5699,5813,5919,6150,6161,
+  Exclusions_CDS=5,6
+  Inclusions_CDS=7
+  Name=MqttTopicInstance_SP_String_Subscribe_v003
+  SmplCName=MqttTopicInstance_SP_String_Subscribe_v003.usp
+  Code=1
+  SysRev5=4.000
+  SMWRev=2.02.05
+  OutputCue1=[~UNUSED~]
+  OutputSigType1=Digital
+  OutputCue2=Initialize_FB
+  OutputSigType2=Digital
+  OutputList2Cue1=TopicOutput[#]
+  OutputList2SigType1=Serial
+  ParamCue1=[Reference Name]
+  ParamCue2=UniqueID
+  ParamSigType2=Constant
+  ParamCue3=[~UNUSED~]
+  ParamSigType3=Constant
+  ParamCue4=TopicName[1]
+  ParamSigType4=String
+  ParamCue5=TopicName[2]
+  ParamSigType5=String
+  ParamCue6=TopicName[3]
+  ParamSigType6=String
+  ParamCue7=TopicName[4]
+  ParamSigType7=String
+  ParamCue8=TopicName[5]
+  ParamSigType8=String
+  ParamCue9=TopicName[6]
+  ParamSigType9=String
+  ParamCue10=TopicName[7]
+  ParamSigType10=String
+  ParamCue11=TopicName[8]
+  ParamSigType11=String
+  ParamCue12=TopicName[9]
+  ParamSigType12=String
+  ParamCue13=TopicName[10]
+  ParamSigType13=String
+  ParamCue14=TopicName[11]
+  ParamSigType14=String
+  ParamCue15=TopicName[12]
+  ParamSigType15=String
+  ParamCue16=TopicName[13]
+  ParamSigType16=String
+  ParamCue17=TopicName[14]
+  ParamSigType17=String
+  ParamCue18=TopicName[15]
+  ParamSigType18=String
+  ParamCue19=TopicName[16]
+  ParamSigType19=String
+  ParamCue20=TopicName[17]
+  ParamSigType20=String
+  ParamCue21=TopicName[18]
+  ParamSigType21=String
+  ParamCue22=TopicName[19]
+  ParamSigType22=String
+  ParamCue23=TopicName[20]
+  ParamSigType23=String
+  MinVariableInputs=0
+  MaxVariableInputs=0
+  MinVariableInputsList2=0
+  MaxVariableInputsList2=0
+  MinVariableOutputs=2
+  MaxVariableOutputs=2
+  MinVariableOutputsList2=20
+  MaxVariableOutputsList2=20
+  MinVariableParams=22
+  MaxVariableParams=22
+  Expand=expand_separately
+  Expand2=expand_separately
+  ProgramTree=Logic
+  SymbolTree=32
+  Hint=
+  PdfHelp=
+  HelpID= 
+  Render=4
+  Smpl-C=16
+  CompilerCode=-48
+  CompilerParamCode=27
+  CompilerParamCode5=14
+  NumFixedParams=1
+  Pp1=1
+  Pp2=2
+  Pp4=4
+  Pp5=5
+  Pp6=6
+  Pp7=7
+  Pp8=8
+  Pp9=9
+  Pp10=10
+  Pp11=11
+  Pp12=12
+  Pp13=13
+  Pp14=14
+  Pp15=15
+  Pp16=16
+  Pp17=17
+  Pp18=18
+  Pp19=19
+  Pp20=20
+  Pp21=21
+  Pp22=22
+  Pp23=23
+  MPp=23
+  NVStorage=10
+  ParamSigType1=String
+  SmplCInputCue1=o#
+  SmplCOutputCue1=i#
+  SmplCInputList2Cue1=an#
+  SmplCOutputList2Cue1=ai#
+  SPlus2CompiledName=S2_MqttTopicInstance_SP_String_Subscribe_v003
+  SymJam=NonExclusive
+  FileName=MqttTopicInstance_SP_String_Subscribe_v003.ush
+  SIMPLPlusModuleEncoding=0
+  clz1=CrestronMqttClient
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=1
+  Tp=1
+  NoS=False
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=2
+  Tp=1
+  HD=False
+  Sgn=0
+  Lng=False
+  NF=63
+  NoS=True
+  DNF=1
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=4
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=5
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=6
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=7
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=8
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=9
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=10
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=11
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=12
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=13
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=14
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=15
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=16
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=17
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=18
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=19
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=20
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=21
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=22
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=23
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]

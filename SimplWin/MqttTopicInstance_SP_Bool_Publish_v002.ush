@@ -1,0 +1,443 @@
+[BEGIN]
+  Version=1
+[END]
+[BEGIN]
+  ObjTp=FSgntr
+  Sgntr=UserSPlus
+  RelVrs=1
+  IntStrVrs=1
+  SPlusVrs=4.06.00
+  CrossCplrVrs=1.3
+[END]
+[BEGIN]
+  ObjTp=Hd
+  Cmn1=This package of modules allows to connect to an MQTT broker and||1
+  Cmn2=to publish and subscribe to topics.\\\\The MqttTopicInstance modules||1
+  Cmn3=are used to publish and subscribe to topics on the MQTT broker.||1
+  Cmn4=The MQTT data is always a string, but the modules converts the data||1
+  Cmn5=in the data format that is needed.\\\\This module is to publish||1
+  Cmn6=digital/bool values. Values will be send on change of the input.
+  Cmn7=\\\\Parameters:\\UniqueID: This ID must match with the ID that is||1
+  Cmn8=entered of the corresponding client module.\\QoSLevel: Sets the||1
+  Cmn9=QoSLevel value that is used on all topics of this module that are||1
+  Cmn10=published. QoSLevel defines how sure it is that the packages will||1
+  Cmn11=be arrive on the subscriber side, please check MQTT documentation||1
+  Cmn12=for details.\\Retain: Sets the Retain flag that is used on all topics||1
+  Cmn13=of this module that are published. If enabled, the broker will cache||1
+  Cmn14=the values and allow subscribes at a later point to get the current||1
+  Cmn15=value.\\TrueValue: Defines what as high/1d/true values will be send,||1
+  Cmn16=as MQTT data is a string, MQTT don't define how the value for this||1
+  Cmn17=data type looks like. A TrueValue could be "true","True","On","Enabled",.
+  Cmn18=..\\FalseValue: Defines what as low/0d/falses values will be send,||1
+  Cmn19=as MQTT data is a string, MQTT don't define how the value for this||1
+  Cmn20=data type looks like. A FalseValue could be "false","False","Off","Disabled",.
+  Cmn21=..\\TopicName[]: Defines the topic for the signal next to it. e.
+  Cmn22=g. my/topic/temp\\\\Inputs:\\TopicInput[]: The signal input for||1
+  Cmn23=the topic.\\\\Outputs:\\Initialize_FB: When true, indicates that||1
+  Cmn24=it could bind to the client module and is ready to use.\\
+[END]
+[BEGIN]
+  ObjTp=Symbol
+  Exclusions=1,19,20,21,88,89,167,168,179,213,214,215,216,217,225,226,248,249,266,267,310,362,378,380,405,407,408,409,478,522,537,554,586,590,611,624,718,756,767,830,841,842,854,883,955,1032,1062,1079,1128,1129,1134,1140,1157,1158,1195,1199,1220,1221,1222,1223,1299,1348,1349,1439,1472,1473,1499,1746,1766,1803,1975,2229,2354,2514,2523,2532,2567,2574,2590,2651,2655,2706,2707,2817,2886,2938,2947,3181,3197,3233,3235,3236,3427,3454,3567,3568,3601,3602,3680,3682,3706,3708,3710,3735,3736,3816,3888,3902,3903,3912,3918,3925,3926,4176,4193,4206,4207,4308,4476,4591,4769,5360,5388,5420,5455,5497,5699,5813,5919,6150,6161,
+  Exclusions_CDS=5,6
+  Inclusions_CDS=7
+  Name=MqttTopicInstance_SP_Bool_Publish_v002
+  SmplCName=MqttTopicInstance_SP_Bool_Publish_v002.usp
+  Code=1
+  SysRev5=4.000
+  SMWRev=2.02.05
+  InputCue1=[~UNUSED~]
+  InputSigType1=Digital
+  InputCue2=[~UNUSED~]
+  InputSigType2=Digital
+  InputCue3=[~UNUSED~]
+  InputSigType3=Digital
+  InputCue4=[~UNUSED~]
+  InputSigType4=Digital
+  InputCue5=[~UNUSED~]
+  InputSigType5=Digital
+  InputCue6=[~UNUSED~]
+  InputSigType6=Digital
+  InputCue7=TopicInput[#]
+  InputSigType7=Digital
+  OutputCue1=[~UNUSED~]
+  OutputSigType1=Digital
+  OutputCue2=[~UNUSED~]
+  OutputSigType2=Digital
+  OutputCue3=[~UNUSED~]
+  OutputSigType3=Digital
+  OutputCue4=[~UNUSED~]
+  OutputSigType4=Digital
+  OutputCue5=[~UNUSED~]
+  OutputSigType5=Digital
+  OutputCue6=Initialize_FB
+  OutputSigType6=Digital
+  ParamCue1=[Reference Name]
+  ParamCue2=UniqueID
+  ParamSigType2=Constant
+  ParamCue3=QoSLevel,0d,1d,2d
+  ParamSigType3=List
+  ParamCue4=Retain,0d,1d
+  ParamSigType4=List
+  ParamCue5=TrueValue
+  ParamSigType5=String
+  ParamCue6=FalseValue
+  ParamSigType6=String
+  ParamCue7=[~UNUSED~]
+  ParamSigType7=Constant
+  ParamCue8=TopicName[1]
+  ParamSigType8=String
+  ParamCue9=TopicName[2]
+  ParamSigType9=String
+  ParamCue10=TopicName[3]
+  ParamSigType10=String
+  ParamCue11=TopicName[4]
+  ParamSigType11=String
+  ParamCue12=TopicName[5]
+  ParamSigType12=String
+  ParamCue13=TopicName[6]
+  ParamSigType13=String
+  ParamCue14=TopicName[7]
+  ParamSigType14=String
+  ParamCue15=TopicName[8]
+  ParamSigType15=String
+  ParamCue16=TopicName[9]
+  ParamSigType16=String
+  ParamCue17=TopicName[10]
+  ParamSigType17=String
+  ParamCue18=TopicName[11]
+  ParamSigType18=String
+  ParamCue19=TopicName[12]
+  ParamSigType19=String
+  ParamCue20=TopicName[13]
+  ParamSigType20=String
+  ParamCue21=TopicName[14]
+  ParamSigType21=String
+  ParamCue22=TopicName[15]
+  ParamSigType22=String
+  ParamCue23=TopicName[16]
+  ParamSigType23=String
+  ParamCue24=TopicName[17]
+  ParamSigType24=String
+  ParamCue25=TopicName[18]
+  ParamSigType25=String
+  ParamCue26=TopicName[19]
+  ParamSigType26=String
+  ParamCue27=TopicName[20]
+  ParamSigType27=String
+  MinVariableInputs=26
+  MaxVariableInputs=26
+  MinVariableInputsList2=0
+  MaxVariableInputsList2=0
+  MinVariableOutputs=6
+  MaxVariableOutputs=6
+  MinVariableOutputsList2=0
+  MaxVariableOutputsList2=0
+  MinVariableParams=26
+  MaxVariableParams=26
+  Expand=expand_separately
+  Expand2=expand_separately
+  ProgramTree=Logic
+  SymbolTree=32
+  Hint=
+  PdfHelp=
+  HelpID= 
+  Render=4
+  Smpl-C=16
+  CompilerCode=-48
+  CompilerParamCode=27
+  CompilerParamCode5=14
+  NumFixedParams=1
+  Pp1=1
+  Pp2=2
+  Pp3=3
+  Pp4=4
+  Pp5=5
+  Pp6=6
+  Pp8=8
+  Pp9=9
+  Pp10=10
+  Pp11=11
+  Pp12=12
+  Pp13=13
+  Pp14=14
+  Pp15=15
+  Pp16=16
+  Pp17=17
+  Pp18=18
+  Pp19=19
+  Pp20=20
+  Pp21=21
+  Pp22=22
+  Pp23=23
+  Pp24=24
+  Pp25=25
+  Pp26=26
+  Pp27=27
+  MPp=27
+  NVStorage=10
+  ParamSigType1=String
+  SmplCInputCue1=o#
+  SmplCOutputCue1=i#
+  SmplCInputList2Cue1=an#
+  SmplCOutputList2Cue1=ai#
+  SPlus2CompiledName=S2_MqttTopicInstance_SP_Bool_Publish_v002
+  SymJam=NonExclusive
+  FileName=MqttTopicInstance_SP_Bool_Publish_v002.ush
+  SIMPLPlusModuleEncoding=0
+  clz1=CrestronMqttClient
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=1
+  Tp=1
+  NoS=False
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=2
+  Tp=1
+  HD=False
+  Sgn=0
+  Lng=False
+  NF=63
+  NoS=True
+  DNF=1
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=3
+  Tp=1
+  HD=True
+  DV=0d
+  Sgn=0
+  Lng=False
+  NF=1
+  NoS=True
+  DNF=1
+  VVS=2
+  VN=3
+  Val1=0d
+  Lbl1=At most once
+  Val2=1d
+  Lbl2=At least once
+  Val3=2d
+  Lbl3=Exactly once
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=4
+  Tp=1
+  HD=True
+  DV=0d
+  Sgn=0
+  Lng=False
+  NF=1
+  NoS=True
+  DNF=1
+  VVS=2
+  VN=2
+  Val1=0d
+  Lbl1=Off
+  Val2=1d
+  Lbl2=On
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=5
+  Tp=1
+  HD=True
+  DV=true
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=6
+  Tp=1
+  HD=True
+  DV=false
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=8
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=9
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=10
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=11
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=12
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=13
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=14
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=15
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=16
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=17
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=18
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=19
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=20
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=21
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=22
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=23
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=24
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=25
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=26
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
+[BEGIN]
+  ObjTp=Dp
+  H=27
+  Tp=1
+  HD=True
+  DV=
+  NoS=False
+  VVS=0
+[END]
